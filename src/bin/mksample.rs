@@ -49,6 +49,13 @@ fn main() {
         SampleLength::Characters(30_000_000),
         cg,
     );
+
+    builder.sample(
+        "ranged-5to80char-300MB-alphanumeric.txt",
+        LineLength::Range(5..81),
+        SampleLength::Characters(300_000_000),
+        cg,
+    );
 }
 
 /// Wraps build_sample invocations in new threads for easy parallelism.
